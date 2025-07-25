@@ -6,34 +6,34 @@ import Footer from '../components/Footer.astro';
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Inverzzo: La plataforma #1 para inversionistas minoristas en Colombia. Únete a la lista de espera para acceder a datos confiables y simulaciones de inversión.">
-  <meta name="keywords" content="Inverzzo, inversiones Colombia, herramientas de inversión, CDTs, acciones BVC, educación financiera">
-  <meta name="author" content="Inverzzo">
-  <meta property="og:title" content="Inverzzo - Plataforma #1 para Inversionistas Minoristas">
-  <meta property="og:description" content="Únete a Inverzzo y toma el control de tus inversiones con datos confiables y simulaciones de portafolios.">
-  <meta property="og:image" content="https://inverzzo.com/og-image.jpg">
-  <meta property="og:url" content="https://inverzzo.com">
-  <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inverzzo: la plataforma para inversionistas minoristas. Accede a datos confiables, simulaciones de portafolios y educación financiera en Colombia." />
+  <meta name="keywords" content="Inverzzo, inversiones, Colombia, CDTs, acciones BVC, educación financiera" />
+  <meta name="author" content="Inverzzo" />
+  <meta property="og:title" content="Inverzzo - Plataforma para Inversionistas Minoristas" />
+  <meta property="og:description" content="Únete a Inverzzo y toma el control de tus inversiones con datos confiables y simulaciones de portafolios." />
+  <meta property="og:image" content="https://inverzzo.com/og-image.jpg" />
+  <meta property="og:url" content="https://inverzzo.com" />
+  <meta property="og:type" content="website" />
   <title>Inverzzo - Únete a la Lista de Espera</title>
-  <link rel="canonical" href="https://inverzzo.com">
+  <link rel="canonical" href="https://inverzzo.com" />
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
-  <!-- Hero Section -->
-  <section class="min-h-screen bg-gradient-to-b from-blue-600 to-blue-800 flex flex-col justify-center items-center text-white px-4 py-12">
+  <!-- Sección hero -->
+  <section class="min-h-screen bg-gradient-to-b from-blue-500 to-indigo-800 flex flex-col justify-center items-center text-white px-4 py-20">
     <div class="text-center max-w-3xl">
-      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Inverzzo: Invierte con Confianza en Colombia</h1>
-      <p class="text-lg sm:text-xl mb-8">La plataforma #1 para inversionistas minoristas. Accede a datos confiables, simulaciones de portafolios y educación financiera. ¡Sé el primero en unirte!</p>
-      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md mx-auto">
-        <h2 class="text-xl font-semibold text-gray-800 mb-4">Únete a la Lista de Espera</h2>
+      <h1 class="text-5xl sm:text-6xl font-extrabold mb-4">Invierte con confianza en Colombia</h1>
+      <p class="text-lg sm:text-2xl mb-8">En Inverzzo tendrás acceso a datos en tiempo real, simulaciones de portafolios y educación financiera. Sé parte del cambio y regístrate primero.</p>
+      <div class="bg-white p-6 sm:p-8 rounded-xl shadow-xl w-full max-w-md mx-auto text-gray-800">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Únete a la lista de espera</h2>
         <form id="waitlist-form" class="space-y-4">
           <div>
             <input
               type="text"
               name="name"
               placeholder="Tu nombre"
-              class="w-full p-3 rounded border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -42,60 +42,92 @@ import Footer from '../components/Footer.astro';
               type="email"
               name="email"
               placeholder="Tu correo electrónico"
-              class="w-full p-3 rounded border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
           <button
             type="submit"
-            class="w-full bg-blue-600 text-white p-3 rounded font-semibold hover:bg-blue-700 transition transform hover:scale-105"
+            class="w-full bg-blue-600 hover:bg-blue-700 transition-transform transform hover:-translate-y-1 text-white p-3 rounded-lg font-bold"
           >
-            Únete Ahora
+            Únete ahora
           </button>
         </form>
-        <p class="text-sm text-gray-600 mt-4">Únete a más de 1,000 inversionistas en la espera. ¡Sin spam, lo prometemos!</p>
+        <p class="text-sm text-gray-600 mt-4">Más de 1 000 personas ya esperan. ¡Sin spam, lo prometemos!</p>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-12 px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">¿Por qué Inverzzo?</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="p-6 rounded-lg shadow-md bg-gray-50 text-center">
-        <h3 class="text-lg font-semibold mb-2">Datos Confiables</h3>
-        <p class="text-gray-600">Información en tiempo real sobre CDTs y acciones de la BVC, diseñada para Colombia.</p>
+  <!-- Sección de características -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">¿Por qué elegir Inverzzo?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Tarjeta 1 -->
+      <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+        <!-- Icono -->
+        <svg class="w-12 h-12 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l3-3 3 3m0 0l-3 3-3-3m9 3V9m-9 4V5"/></svg>
+        <h3 class="text-xl font-semibold mb-2">Datos confiables en tiempo real</h3>
+        <p class="text-gray-600 text-center">Accede a la información más actualizada sobre CDTs y acciones de la BVC adaptada al contexto colombiano.</p>
       </div>
-      <div class="p-6 rounded-lg shadow-md bg-gray-50 text-center">
-        <h3 class="text-lg font-semibold mb-2">Simulaciones de Portafolios</h3>
-        <p class="text-gray-600">Prueba estrategias de inversión sin riesgos y visualiza tus resultados.</p>
+      <!-- Tarjeta 2 -->
+      <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+        <svg class="w-12 h-12 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <h3 class="text-xl font-semibold mb-2">Simulaciones de portafolios sin riesgos</h3>
+        <p class="text-gray-600 text-center">Experimenta diferentes estrategias y observa tus resultados antes de invertir dinero real.</p>
       </div>
-      <div class="p-6 rounded-lg shadow-md bg-gray-50 text-center">
-        <h3 class="text-lg font-semibold mb-2">Educación Financiera</h3>
-        <p class="text-gray-600">Blogs, videos y podcasts para tomar decisiones informadas.</p>
+      <!-- Tarjeta 3 -->
+      <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+        <svg class="w-12 h-12 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5M19 11C17.386 11 16 9.764 16 8.257V4.743C16 3.236 17.386 2 19 2M19 11C20.614 11 22 9.764 22 8.257V4.743C22 3.236 20.614 2 19 2M5 11v9.764C5 22 6.386 23 8 23h8c1.614 0 3-1.236 3-2.736V11H5z"/></svg>
+        <h3 class="text-xl font-semibold mb-2">Educación financiera a tu medida</h3>
+        <p class="text-gray-600 text-center">Accede a artículos, videos y podcasts para mejorar tus decisiones de inversión.</p>
       </div>
     </div>
-    <div class="text-center mt-8">
-      <a href="#waitlist-form" class="inline-block bg-blue-600 text-white px-6 py-3 rounded font-semibold hover:bg-blue-700 transition">Regístrate Hoy</a>
+    <div class="text-center mt-12">
+      <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-transform transform hover:-translate-y-1">Regístrate hoy</a>
     </div>
   </section>
 
   <Footer />
 
+  <!-- Script para manejar el formulario -->
   <script>
     document.addEventListener('astro:page-load', () => {
       const form = document.getElementById('waitlist-form');
       if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
           e.preventDefault();
-          const name = e.target.elements.name.value;
-          const email = e.target.elements.email.value;
-          if (name && email) {
-            alert(`¡Gracias, ${name}! Te has unido a la lista de espera de Inverzzo.`);
-            console.log(`Nombre: ${name}, Email: ${email}`); // Simulate SES/CRM integration
-            form.reset();
-          } else {
+          const name = e.target.elements.name.value.trim();
+          const email = e.target.elements.email.value.trim();
+
+          if (!name || !email) {
             alert('Por favor, completa todos los campos.');
+            return;
+          }
+
+          try {
+            // La API de NocoDB espera un array de objetos en el cuerpo de la solicitud
+            const payload = [{ Name: name, Email: email }];
+
+            const response = await fetch('https://app.nocodb.com/api/v2/tables/mze85bx95icc47h/records', {
+              method: 'POST',
+              headers: {
+                'xc-token': 'kVUsJQS63vDxQXDqHlY6rAL1QVmFaYs1KvFUZELq',
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+              // Lee la respuesta para obtener información de error
+              const errorData = await response.json();
+              throw new Error(errorData.message || 'Error al registrar en NocoDB');
+            }
+
+            alert(`¡Gracias, ${name}! Te has unido a la lista de espera de Inverzzo.`);
+            form.reset();
+          } catch (error) {
+            console.error('NocoDB API Error:', error);
+            alert('Hubo un problema al registrarte. Por favor, intenta de nuevo o contacta con soporte.');
           }
         });
       }
