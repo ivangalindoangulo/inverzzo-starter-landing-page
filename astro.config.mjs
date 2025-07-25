@@ -7,7 +7,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://inverzzo.com",
-  output: 'static',
+  output: 'server',
   integrations: [tailwind()],
   adapter: cloudflare({
     platformProxy: {

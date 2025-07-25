@@ -95,41 +95,33 @@ import Footer from '../components/Footer.astro';
       const form = document.getElementById('waitlist-form');
       if (form) {
         form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const name = e.target.elements.name.value.trim();
-          const email = e.target.elements.email.value.trim();
+		  e.preventDefault();
+		  const name = e.target.elements.name.value.trim();
+		  const email = e.target.elements.email.value.trim();
 
-          if (!name || !email) {
-            alert('Por favor, completa todos los campos.');
-            return;
-          }
+		  if (!name || !email) {
+			alert('Por favor, completa todos los campos.');
+			return;
+		  }
 
-          try {
-            // La API de NocoDB espera un array de objetos en el cuerpo de la solicitud
-            const payload = [{ Name: name, Email: email }];
+		  try {
+			const res = await fetch('/api/waitlist', {
+			  method: 'POST',
+			  headers: { 'Content-Type': 'application/json' },
+			  body: JSON.stringify({ name, email }),
+			});
 
-            const response = await fetch('https://app.nocodb.com/api/v2/tables/mze85bx95icc47h/records', {
-              method: 'POST',
-              headers: {
-                'xc-token': 'kVUsJQS63vDxQXDqHlY6rAL1QVmFaYs1KvFUZELq',
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(payload),
-            });
-
-            if (!response.ok) {
-              // Lee la respuesta para obtener información de error
-              const errorData = await response.json();
-              throw new Error(errorData.message || 'Error al registrar en NocoDB');
-            }
-
-            alert(`¡Gracias, ${name}! Te has unido a la lista de espera de Inverzzo.`);
-            form.reset();
-          } catch (error) {
-            console.error('NocoDB API Error:', error);
-            alert('Hubo un problema al registrarte. Por favor, intenta de nuevo o contacta con soporte.');
-          }
-        });
+			if (!res.ok) {
+			  const error = await res.text();
+			  throw new Error(error);
+			}
+			alert(`¡Gracias, ${name}! Te has unido a la lista de espera de Inverzzo.`);
+			form.reset();
+		  } catch (err) {
+			console.error(err);
+			alert('Hubo un problema al registrarte. Intenta de nuevo.');
+		  }
+		});
       }
     });
   </script>

@@ -10,5 +10,8 @@
   "observability": {
     "enabled": true
   },
-  "upload_source_maps": true
+  "upload_source_maps": true,
+  "vars": {
+    "NOCODB_TOKEN": "kVUsJQS63vDxQXDqHlY6rAL1QVmFaYs1KvFUZELq"
+  }
 }
