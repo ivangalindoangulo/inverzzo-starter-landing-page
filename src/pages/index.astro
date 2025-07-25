@@ -90,27 +90,24 @@ import Footer from '../components/Footer.astro';
   <Footer />
 
   <!-- Script para manejar el formulario -->
-  <script>
-    document.addEventListener('astro:page-load', () => {
-      const form = document.getElementById('waitlist-form');
-      if (form) {
-        form.addEventListener('submit', async (e) => {
+  <script type="module">
+	  console.log('script cargado');
+	  const form = document.getElementById('waitlist-form');
+	  if (form) {
+		form.addEventListener('submit', async (e) => {
 		  e.preventDefault();
 		  const name = e.target.elements.name.value.trim();
 		  const email = e.target.elements.email.value.trim();
-
 		  if (!name || !email) {
 			alert('Por favor, completa todos los campos.');
 			return;
 		  }
-
 		  try {
 			const res = await fetch('/api/waitlist', {
 			  method: 'POST',
 			  headers: { 'Content-Type': 'application/json' },
 			  body: JSON.stringify({ name, email }),
 			});
-
 			if (!res.ok) {
 			  const error = await res.text();
 			  throw new Error(error);
@@ -122,8 +119,8 @@ import Footer from '../components/Footer.astro';
 			alert('Hubo un problema al registrarte. Intenta de nuevo.');
 		  }
 		});
-      }
-    });
-  </script>
+	  }
+	</script>
+
 </body>
 </html>
