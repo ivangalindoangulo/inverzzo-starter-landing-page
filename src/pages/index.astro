@@ -23,10 +23,12 @@ import Footer from '../components/Footer.astro';
   <!-- Sección hero -->
   <section class="min-h-screen bg-gradient-to-b from-blue-500 to-indigo-800 flex flex-col justify-center items-center text-white px-4 py-20">
     <div class="text-center max-w-3xl">
+      <!-- Tagline previo al título -->
+      <p class="uppercase tracking-wide text-sm mb-2">Pre‑regístrate gratis</p>
       <h1 class="text-5xl sm:text-6xl font-extrabold mb-4">Información confiable para invertir en Colombia sin complicaciones</h1>
-      <p class="text-lg sm:text-2xl mb-8">Accede a datos de mejor rendimiento en CDTs y acciones de la BVC - Bolsa de Valores de Colombia, simula tus estrategias de inversión y aprende a tomar decisiones informadas. Únete a nuestra lista de espera y sé de los primeros en probar Inverzzo.</p>
+      <p class="text-lg sm:text-2xl mb-8">Accede a datos de mejores rendimientos en CDTs y acciones de la BVC. Simula tus inversiones y aprende a decidir con confianza. Únete a nuestra lista de espera y sé de los primeros en probar Inverzzo.</p>
       <div class="bg-white p-6 sm:p-8 rounded-xl shadow-xl w-full max-w-md mx-auto text-gray-800">
-        <h2 class="text-2xl font-semibold mb-4 text-center">Regístrate gratis y sé parte de nuestra comunidad de inversionistas</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-center">Regístrate gratis y sé parte de nuestra comunidad de inversionistas</h2>
         <form id="waitlist-form" class="space-y-4">
           <div>
             <input
@@ -50,7 +52,7 @@ import Footer from '../components/Footer.astro';
             type="submit"
             class="w-full bg-blue-600 hover:bg-blue-700 transition-transform transform hover:-translate-y-1 text-white p-3 rounded-lg font-bold"
           >
-            Quiero información exclusiva
+            Obtén acceso exclusivo
           </button>
         </form>
         <p class="text-sm text-gray-600 mt-4">Ya somos más de 1 000 inversionistas esperando. Te enviaremos solo información de valor, sin spam.</p>
@@ -67,12 +69,12 @@ import Footer from '../components/Footer.astro';
         <!-- Icono -->
         <svg class="w-12 h-12 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l3-3 3 3m0 0l-3 3-3-3m9 3V9m-9 4V5"/></svg>
         <h3 class="text-xl font-semibold mb-2 text-center">Datos confiables </h3>
-        <p class="text-gray-600 text-center">Accede a información sobre CDTs y acciones de la BVC curada para el mercado Colombiano. Ahorra horas de búsqueda y confía en datos sólidos.</p>
+        <p class="text-gray-600 text-center">Accede a información en tiempo real sobre CDTs y acciones de la BVC curada para el mercado colombiano. Ahorra horas de búsqueda y confía en datos sólidos.</p>
       </div>
       <!-- Tarjeta 2 -->
       <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
         <svg class="w-12 h-12 mb-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        <h3 class="text-xl font-semibold mb-2 text-center">Simulaciones de estrategias</h3>
+        <h3 class="text-xl font-semibold mb-2 text-center">Simulaciones sin riesgos</h3>
         <p class="text-gray-600 text-center">Prueba estrategias sin arriesgar tu dinero y visualiza escenarios reales para tomar decisiones con seguridad.</p>
       </div>
       <!-- Tarjeta 3 -->
@@ -91,7 +93,7 @@ import Footer from '../components/Footer.astro';
   <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="max-w-5xl mx-auto text-center space-y-3">
       <p class="text-gray-600">Creado para inversionistas minoristas Colombianos que buscan generar ingresos adicionales y protegerse de la inflación.</p>
-      <p class="text-gray-600">Nuestros usuarios ahorran hasta un 80 % en comparación con asesores tradicionales y cuentan con herramientas adaptadas al contexto local.</p>
+      <p class="text-gray-600">Nuestros usuarios ahorran hasta un 90 % en comparación con asesores tradicionales y cuentan con herramientas adaptadas al contexto local.</p>
     </div>
   </section>
 
@@ -99,6 +101,7 @@ import Footer from '../components/Footer.astro';
 
   <!-- Script para manejar el formulario -->
   <script type="module">
+    console.log('script cargado');
     const form = document.getElementById('waitlist-form');
     if (form) {
       form.addEventListener('submit', async (e) => {
