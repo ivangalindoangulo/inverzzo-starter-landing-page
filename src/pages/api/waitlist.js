@@ -1,5 +1,5 @@
 // src/pages/api/waitlist.js
-export async function post({ request }) {
+export async function POST({ request }) {
   try {
     const { name, email } = await request.json();
     if (!name || !email) {
@@ -16,7 +16,7 @@ export async function post({ request }) {
       {
         method: 'POST',
         headers: {
-          'xc-token': import.meta.env.NOCODB_TOKEN,
+          'xc-token': 'kVUsJQS63vDxQXDqHlY6rAL1QVmFaYs1KvFUZELq',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload),
